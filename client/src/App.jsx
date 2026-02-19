@@ -56,14 +56,6 @@ function App() {
   });
 
 
-  const completeAll = () => {
-    const allCompleted = products.every((p) => p.completed);
-    const updatedProducts = products.map((p) => ({ ...p, completed: !allCompleted, }));
-    setProducts(updatedProducts);
-    localStorage.setItem("products", JSON.stringify(updatedProducts));
-  };
-
-
   const clearAll = () => {
   setProducts([]);
   localStorage.setItem("products", JSON.stringify([])); 
